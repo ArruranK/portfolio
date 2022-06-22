@@ -1,0 +1,24 @@
+{
+  "name": "arruran-k",
+  "version": "1.0.0",
+  "private": true,
+  "description": "arruran-k",
+  "author": "ArruranK",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^4.16.0",
+    "gatsby-plugin-postcss": "^5.17.0",
+    "postcss": "^8.4.14",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  }
+}
