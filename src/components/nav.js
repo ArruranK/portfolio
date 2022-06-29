@@ -13,7 +13,10 @@ export default function Nav({isDark, setTheme, scrolledToTop, scrollDirection}) 
 
   useEffect(() => {
     function handleResize() {
-      setWidth(window.innerWidth)
+      if (isBrowser) {
+        setWidth(window.innerWidth)
+      }
+      
     }
     if (isBrowser) {
       window.addEventListener('resize', handleResize)
