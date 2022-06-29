@@ -8,10 +8,6 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
               use: loaders.null(),
             },
             {
-                test: /bootstrap/,
-                use: loaders.null(),
-            },
-            {
                 test: /static-entry.js/,
                 use: loaders.null(),
             },
