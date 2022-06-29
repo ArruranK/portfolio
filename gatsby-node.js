@@ -11,10 +11,6 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
                 test: /static-entry.js/,
                 use: loaders.null(),
             },
-            {
-                test: /utils.js/,
-                use: loaders.null(),
-            },
           ],
         },
       })
