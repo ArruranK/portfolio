@@ -4,8 +4,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
         module: {
           rules: [
             {
-                test: /static-entry.js/,
-                use: loaders.null(),
+
             },
           ],
         },

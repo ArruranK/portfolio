@@ -4,16 +4,12 @@ import {Footer} from './sections'
 import {ScrollDir} from '../hooks';
 
 export default function Layout({ children, isDark, setTheme }) {
-  const isBrowser = typeof window !== "undefined";
-
+  
   const scrollDirection = ScrollDir('down');
   const [scrolledToTop, setScrolledToTop] = useState(true);
 
   const handleScroll = () => {
-    if (isBrowser) {
-      setScrolledToTop(window.scrollY < 50);
-    }
-    
+    setScrolledToTop(window.scrollY < 50);
   };
 
   useEffect(() => {
