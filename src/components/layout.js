@@ -5,7 +5,7 @@ import {ScrollDir} from '../hooks';
 
 export default function Layout({ children, isDark, setTheme }) {
   const isBrowser = typeof window !== "undefined";
-  
+
   const scrollDirection = ScrollDir('down');
   const [scrolledToTop, setScrolledToTop] = useState(true);
 
@@ -17,15 +17,11 @@ export default function Layout({ children, isDark, setTheme }) {
   };
 
   useEffect(() => {
-    if (isBrowser) {
-      window.addEventListener('scroll', handleScroll);
-    }
-    
+
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      if (isBrowser) {
-        window.removeEventListener('scroll', handleScroll);
-      }
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 

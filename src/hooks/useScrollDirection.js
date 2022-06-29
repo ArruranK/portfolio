@@ -5,13 +5,11 @@ const SCROLL_DOWN = 'down';
 
 
 const useScrollDirection = ({ initialDirection, thresholdPixels, off } = {}) => {
-  const isBrowser = typeof window !== "undefined"
   const [scrollDir, setScrollDir] = useState(initialDirection);
 
   useEffect(() => {
-
     const threshold = thresholdPixels || 0;
-    let lastScrollY = isBrowse ? window.pageYOffset : 0;
+    let lastScrollY = window.pageYOffset;
     let ticking = false;
 
     const updateScrollDir = () => {
@@ -29,7 +27,7 @@ const useScrollDirection = ({ initialDirection, thresholdPixels, off } = {}) => 
     };
 
     const onScroll = () => {
-      if (!ticking && isBrowser) {
+      if (!ticking) {
         window.requestAnimationFrame(updateScrollDir);
         ticking = true;
       }
@@ -39,7 +37,7 @@ const useScrollDirection = ({ initialDirection, thresholdPixels, off } = {}) => 
      * Bind the scroll handler if `off` is set to false.
      * If `off` is set to true reset the scroll direction.
      */
-    !off && isBrowser ? window.addEventListener('scroll', onScroll) : setScrollDir(initialDirection);
+    !off ? window.addEventListener('scroll', onScroll) : setScrollDir(initialDirection);
 
     return () => window.removeEventListener('scroll', onScroll);
   }, [initialDirection, thresholdPixels, off]);
