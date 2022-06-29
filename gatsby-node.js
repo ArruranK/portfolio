@@ -4,8 +4,8 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
         module: {
           rules: [
             {
-              test: /miniraf.es.js/,
-              use: loaders.null(),
+                test: /static-entry.js/,
+                use: loaders.null(),
             },
           ],
         },
