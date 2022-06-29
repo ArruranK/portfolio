@@ -5,15 +5,20 @@ import { Link } from 'gatsby';
 
 export default function Nav({isDark, setTheme, scrolledToTop, scrollDirection}) {
 
-  const [width, setWidth] = useState(window.innerWidth);
+  const isBrowser = typeof window !== "undefined"; 
+
+  const [width, setWidth] = useState(isBrowser ? window.innerWidth : 0);
+
   const [navOpen, setNav] = useState(false);
 
   useEffect(() => {
     function handleResize() {
       setWidth(window.innerWidth)
     }
-
-    window.addEventListener('resize', handleResize)
+    if (isBrowser) {
+      window.addEventListener('resize', handleResize)
+    }
+    
   })
 
   const themeHandler = () => {

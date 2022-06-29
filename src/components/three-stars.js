@@ -6,15 +6,21 @@ import * as random from 'maath/random/dist/maath-random.cjs';
 import { MousePos } from '../hooks';
 
 const ThreeStars = () => {
+
   const ref = useRef(null);
   const position = MousePos();
 
   const [sphere] = useState(() => random.inSphere(new Float32Array(5000), { radius: 3.5 }));
 
+  const isBrowser = typeof window !== "undefined";
+
   useFrame((state, delta) => {
     ref.current.rotation.x -= delta / 10;
     ref.current.rotation.y -= delta / 15;
-    state.camera.position.lerp(new THREE.Vector3().set(1-(position.x/window.innerWidth), (position.y/window.innerHeight), 2), 0.05);
+    if (isBrowser) {
+      state.camera.position.lerp(new THREE.Vector3().set(1-(position.x/window.innerWidth), (position.y/window.innerHeight), 2), 0.05);
+    }
+    
   });
 
   return (
