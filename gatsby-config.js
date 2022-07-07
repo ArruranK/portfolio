@@ -2,6 +2,7 @@ module.exports = {
   pathPrefix: "/portfolio",
   siteMetadata: {
     title: `ArruranK`,
+    siteUrl: `https://arrurank.github.io/portfolio/`,
     description: `ArruranK's Portfolio`,
     image: `/logo.png`,
   },
