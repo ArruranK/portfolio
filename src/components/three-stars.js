@@ -14,7 +14,9 @@ const ThreeStars = () => {
   useFrame((state, delta) => {
     ref.current.rotation.x -= delta / 10;
     ref.current.rotation.y -= delta / 15;
-    state.camera.position.lerp(new THREE.Vector3().set(1-(position.x/window.innerWidth), (position.y/window.innerHeight), 2), 0.05);
+    if (typeof window !== `undefined`) {
+      state.camera.position.lerp(new THREE.Vector3().set(1-(position.x/window.innerWidth), (position.y/window.innerHeight), 2), 0.05);
+    }
   });
 
   return (
