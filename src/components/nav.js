@@ -5,7 +5,10 @@ import { Link } from 'gatsby';
 
 export default function Nav({isDark, setTheme, scrolledToTop, scrollDirection}) {
 
-  const [width, setWidth] = useState(window.innerWidth);
+  const [width, setWidth] = useState(0);
+  useEffect(() => {
+    setWidth(window.innerWidth)
+  }, [])
   const [navOpen, setNav] = useState(false);
 
   useEffect(() => {
@@ -18,12 +21,14 @@ export default function Nav({isDark, setTheme, scrolledToTop, scrollDirection}) 
 
   const themeHandler = () => {
     setTheme(!isDark);
-
-    if (isDark) {
-      document.body.classList.add('dark')
-    } else {
-      document.body.classList.remove('dark')
+    if (typeof window !== `undefined`) {
+      if (isDark) {
+        document.body.classList.add('dark')
+      } else {
+        document.body.classList.remove('dark')
+      }
     }
+
   }
 
   return (

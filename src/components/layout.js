@@ -9,7 +9,9 @@ export default function Layout({ children, isDark, setTheme }) {
   const [scrolledToTop, setScrolledToTop] = useState(true);
 
   const handleScroll = () => {
-    setScrolledToTop(window.scrollY < 50);
+    if (typeof window !== `undefined`) {
+      setScrolledToTop(window.scrollY < 50);
+    }
   };
 
   useEffect(() => {
