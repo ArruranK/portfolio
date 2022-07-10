@@ -12,7 +12,7 @@ const projects = [
     image:"/assets/tetrisclone.png",
     },
     {name:"Job Scheduler", 
-    description:"Job scheduler written in C using concurrent programming", 
+    description:"Job scheduler written in C using signals and concurrent programming", 
     github: "https://github.com/ArruranK/JobScheduler",
     mainLink:"https://github.com/ArruranK/JobScheduler",
     image:"/assets/jobscheduler.png",

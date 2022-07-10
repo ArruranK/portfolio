@@ -15,10 +15,10 @@ export default function Projects() {
   }, []);
 
   return (
-    <div ref={revealContainer} id="projects" class="container mx-auto mb-[100%] md:mb-[20%] flex flex-col items-center py-12 sm:py-24 h-[100vh]">
+    <div ref={revealContainer} id="projects" class="container mx-auto flex flex-col items-center py-12 sm:py-24 h-[100vh]">
       <h2 class="text-3xl font-bold h-[10%] mb-8">Projects I've worked on</h2>
 
-      <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 w-[80%] p-4">
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 w-full p-4">
         {projects && projects.map((props) => (
           <a className="project-button" href={props.mainLink} rel= "noreferrer" target="_blank">
             <div class={"background p-4 rounded-xl hover:shadow-xl hover:-translate-y-2.5"}>
