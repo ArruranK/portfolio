@@ -44,7 +44,7 @@ export default function Projects() {
         ))}
       </div>
 
-      <h2 class="text-l h-[20%] mt-8">These are some projects I'd like to highlight. Check out my other projects on my <a href={socialMedia.github} rel= "noreferrer" target="_blank" aria-label="Github" className="font-bold">github page</a></h2>
+      <h2 class="text-l h-[20%] mt-8">These are some projects I'd like to highlight. Check out my other projects on my <a href={socialMedia.github} rel= "noreferrer" target="_blank" aria-label="Github" className="font-bold">github page</a>. I've also been working on learning 3d modelling which can be found <a href='https://github.com/ArruranK/blenderProjects' rel= "noreferrer" target="_blank" aria-label="Github" className="font-bold">here!</a></h2>
 
     </div>
   )
