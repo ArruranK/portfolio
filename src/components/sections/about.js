@@ -26,7 +26,7 @@ export default function About( {isDark} ) {
                         I'm a passionate and driven individual with a desire to improve my skills and gain new experiences. This has lead me to work on multiple projects, join the web dev team at Mac start coding, and also become the VP of Finance for our school's computer science society.
                     </p>
                     <p class="mt-4 lg:max-w-md">
-                    Most of my experience is from personal pursuits in web and mobile development and I plan to learn a lot more in the near future. Currently I'm looking for opportunities to continue to grow my skills through professional work experience.
+                    Previously I've been working at IBM as a Software Engineer Intern on the Skills Network team where I worked on developing tools to enhance course authoring and learning. Currently I'm looking for opportunities to continue to grow my skills through professional work experience.
                     </p>    
 
                     <div class="flex items-center mt-6 -mx-2">
